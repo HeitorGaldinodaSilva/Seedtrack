@@ -1,0 +1,81 @@
+#README – Documentação do Projeto SeedTrack
+
+Visão Geral
+O SeedTrack é um sistema web simples criado para gerenciamento de sementes e cadastros relacionados. Ele funciona inteiramente no navegador, utilizando HTML, CSS e JavaScript, e faz o armazenamento dos dados através do localStorage, sem necessidade de backend ou servidor.
+O objetivo do sistema é permitir que o usuário cadastre informações, visualize uma lista com os itens registrados e navegue entre as páginas de forma prática, rápida e intuitiva.
+
+Estrutura de Arquivos
+A pasta do projeto contém os seguintes arquivos:
+
+index.html: página inicial.
+
+cadastrar.html: página onde o usuário registra novos dados.
+
+lista.html: página que exibe os registros armazenados.
+
+style.css: responsável por toda a estilização visual do site.
+
+script.js: contém a lógica principal, controle de dados e manipulação de localStorage.
+
+Imagens PNG/JPG: utilizadas na interface.
+
+Páginas do Sistema
+
+index.html – Página Inicial
+É a porta de entrada do sistema. Oferece acesso às outras seções, funcionando como o centro de navegação. Aqui o usuário encontra botões e atalhos para ir ao cadastro, à lista e a outras funcionalidades.
+
+cadastrar.html – Página de Cadastro
+Nesta página o usuário preenche um formulário com informações que deseja registrar. Os dados inseridos são enviados para o script.js, que os armazena diretamente no localStorage. Nenhum dado é enviado para servidores externos, deixando tudo salvo localmente no navegador.
+
+lista.html – Página de Listagem
+Exibe todos os itens cadastrados. O JavaScript lê o conteúdo do localStorage e monta dinamicamente uma lista na tela. Dependendo da implementação do script, o usuário pode editar, excluir, ordenar ou filtrar os registros existentes.
+
+style.css – Estilização
+Define toda a aparência visual do sistema. Controla cores, fontes, tamanhos, espaçamentos, estrutura em telas pequenas, além do visual de botões e elementos gráficos. Garante que todas as páginas sigam um padrão visual consistente e agradável.
+
+script.js – Lógica de Funcionamento
+O arquivo script.js contém toda a inteligência do site. Entre as funções principais, estão:
+
+capturar os dados enviados pelo formulário,
+
+salvar os dados no localStorage do navegador,
+
+gerar dinamicamente os elementos da lista de registros,
+
+manipular registros (como exclusão ou edição, caso implementado),
+
+atualizar o armazenamento sempre que houver alterações.
+
+Os dados são convertidos em JSON para serem armazenados. São utilizados comandos como:
+localStorage.setItem("seedtrack", JSON.stringify(dados))
+e
+JSON.parse(localStorage.getItem("seedtrack"))
+
+Como Rodar o Projeto
+O SeedTrack é completamente estático. Para executá-lo:
+
+Descompacte a pasta do projeto.
+
+Abra o arquivo index.html em qualquer navegador moderno.
+
+A navegação entre as páginas funcionará normalmente.
+
+Nenhuma instalação de ferramentas adicionais é necessária.
+
+Tecnologias Utilizadas
+
+HTML5
+É a tecnologia responsável pela estrutura do site. Cada página define a organização dos elementos, como botões, textos, inputs e seções. O HTML5 garante compatibilidade com navegadores modernos e oferece tags semânticas que tornam o código mais legível e organizado.
+
+CSS3
+Utilizado para estilizar o site. O CSS controla as cores, fontes, espaçamentos, layout e até mesmo ajustes de responsividade. Ele fornece todos os estilos visuais, garantindo que o sistema tenha uma aparência profissional e uniforme em todas as páginas.
+
+JavaScript
+É a tecnologia responsável pela lógica do sistema. Controla o comportamento da interface, coleta dados dos formulários, manipula a lista exibida e interage com o armazenamento do navegador. O JavaScript permite que o site seja dinâmico, atualizando informações sem recarregar páginas inteiras.
+
+localStorage
+É o mecanismo de armazenamento local do navegador. Ele permite salvar informações diretamente no dispositivo do usuário sem necessidade de banco de dados externo. Os dados permanecem guardados mesmo depois que a página é fechada.
+O localStorage é ideal para aplicações simples porque é rápido, não requer servidor e é fácil de usar com JavaScript.
+
+Imagens PNG/JPG
+As imagens presentes no projeto são utilizadas para melhorar a interface, tornando o sistema mais intuitivo e visualmente agradável. Elas são carregadas de forma estática e exibidas diretamente pelo HTML
