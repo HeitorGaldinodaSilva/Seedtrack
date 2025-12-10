@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Sementes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <img src="/WhatsApp_Image_2025-12-01_at_19.49.34-removebg-preview 2.png" width="100px" alt="Logo Seedtrack">
+        <h1>Seedtrack</h1>
+    </header>
+
+    <!-- FUNDO -->
+    <section class="fundo_cadastrar">
+
+        <div class="rótulo_cadastrar">
+
+            <div class="conteúdo_cadastrar">
+                <h2>Cadastrar Sementes</h2>
+
+              <!-- formulário -->
+                <form class="formulário_cadastrar">
+
+                    <label for="estoque">Número do estoque:</label>
+<input type="text" id="estoque" name="estoque" 
+       required pattern="^[0-9]+$" title="Somente números positivos, sem espaços.">
+
+<label for="semente">Tipo de semente:</label>
+<select id="semente" name="semente" required>
+    <option value="">Selecione</option>
+    <option value="Milho">Milho</option>
+    <option value="Feijão">Feijão</option>
+    <option value="Soja">Soja</option>
+    <option value="Arroz">Arroz</option>
+</select>
+
+<label for="armazem">Armazém:</label>
+<input type="text" id="armazem" name="armazem"
+       required pattern="^[A-Za-zÀ-ÖØ-öø-ÿ ]+$"
+       title="Somente letras (com acentos) e espaços.">
+
+<label for="validade">Validade:</label>
+<input type="date" id="validade" name="validade" required>
+</select>
+
+<label for="quantidade">Quantidade por tonelada:</label>
+<input type="text" id="quantidade" name="quantidade"
+       required pattern="^[0-9]+$" title="Somente números positivos, sem espaços.">
+
+
+                  <!-- botões-->
+                    <button type="submit" class="botão1_cadastrar" onclick="salvarSemente()">Cadastrar</button>
+                    
+
+                    <a href="lista.html" class="botão2_cadastrar">Ver lista de cadastros</a>
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+<script src="script.js"></script>
+</body>
+</html>
