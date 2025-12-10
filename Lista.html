@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Cadastros</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body onload="carregarLista()">
+
+    <header>
+        <img src="/WhatsApp_Image_2025-12-01_at_19.49.34-removebg-preview 2.png" width="90px" alt="Logo Seedtrack">
+        <h1>Lista de Sementes</h1>
+    </header>
+
+  <!-- listas cadastradas-->
+    <section class="lista_area">
+        <table class="tabela_lista">
+            <thead>
+    <tr>
+        <th>Estoque</th>
+        <th>Semente</th>
+        <th>Armazém</th>
+        <th>Validade</th>
+        <th>Quantidade</th>
+        <th>Ações</th>
+    </tr>
+</thead>
+
+            <tbody id="tabela-sementes"></tbody>
+        </table>
+
+      <!-- botão de voltar para cadastrar -->
+        <div class="div_voltar">
+            <a href="cadastrar.html" class="botão3_lista">Cadastrar nova semente</a>
+        </div>
+    </section>
+
+</body>
+</html>
